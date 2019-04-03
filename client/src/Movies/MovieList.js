@@ -6,7 +6,12 @@ export default class MovieList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movies: []
+      movies: [],
+      id: null,
+      title: "",
+      director: "",
+      metascore: null,
+      stars: [],
     };
   }
 
@@ -25,6 +30,9 @@ export default class MovieList extends Component {
         {this.state.movies.map(movie => (
           <MovieDetails key={movie.id} movie={movie} />
         ))}
+        <div className="add-movie-button">
+          <Link to="/movie/add">Add New Movie</Link>
+        </div>
       </div>
     );
   }
