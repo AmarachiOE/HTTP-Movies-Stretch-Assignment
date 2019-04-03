@@ -75,3 +75,50 @@ body {
   color: red;
   text-align: center;
 }
+
+.movie-list {
+  margin-bottom: 5rem;
+  padding: 0 20%;
+}
+
+.movie-list .add-movie-button {
+    background: #4e76cb;
+    color: #fff;
+    box-shadow: 0 6px #3c47ab;
+    margin: 0 auto;
+    width: 50%;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-list .add-movie-button:hover {
+  box-shadow: 0 4px #3c47ab;
+  top: 2px;
+  cursor: pointer;
+}
+
+
+.movie-list .add-movie-button a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+}
+
+
+
+/* 
+
+.btn-2h {
+	border-radius: 20px;
+}
+
+.btn-2h:hover {
+	box-shadow: 0 4px #ab3c3c;
+	top: 2px;
+}
+
+
+*/
