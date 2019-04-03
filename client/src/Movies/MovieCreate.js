@@ -6,12 +6,6 @@ const MovieCreate = props => {
             <h2>Add a New Movie to the List:</h2>
             <form>
                 <input
-                name="id"
-                value={props.id}
-                onChange={props.handleChanges}
-                placeholder="Movie id"
-                />
-                <input
                 name="title"
                 value={props.title}
                 onChange={props.handleChanges}

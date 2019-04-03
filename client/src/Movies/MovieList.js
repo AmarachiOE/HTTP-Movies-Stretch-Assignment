@@ -7,7 +7,6 @@ export default class MovieList extends Component {
     super(props);
     this.state = {
       movies: [],
-      id: null,
       title: "",
       director: "",
       metascore: null,
