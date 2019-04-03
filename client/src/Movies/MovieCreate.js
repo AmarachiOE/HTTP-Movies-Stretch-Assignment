@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+// import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 const MovieCreate = props => {
     return (
         <div className="movie-form-container">
             <h2>Add a New Movie to the List:</h2>
-            <form>
+            <form className="movie-form">
                 <input
                 name="title"
                 value={props.title}
@@ -29,7 +30,7 @@ const MovieCreate = props => {
                 onChange={props.handleChanges}
                 placeholder="Starring..."
                 />
-                <button>Add Movie</button>
+                <button className="movie-form-button">Add Movie</button>
             </form>
         </div>
     )
