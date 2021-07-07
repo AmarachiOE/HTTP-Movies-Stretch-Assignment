@@ -6,13 +6,22 @@ export default class MovieList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movies: []
+      movies: [],
+      // title: "",
+      // director: "",
+      // metascore: null,
+      // stars: [],
+      newMovie:[],
     };
   }
 
   componentDidMount() {
     // fill me in with an HTTP Request to `localhost:5000/api/movies`
-    this.setState({ movies: [] });
+    axios.get("http://localhost:5000/api/movies")
+    .then(res => {
+      console.log(res.data);
+      this.setState({ movies: res.data });
+    })
   }
 
   render() {
@@ -21,6 +30,9 @@ export default class MovieList extends Component {
         {this.state.movies.map(movie => (
           <MovieDetails key={movie.id} movie={movie} />
         ))}
+        <div className="add-movie-button">
+          <Link to="/movie/add">Add New Movie</Link>
+        </div>
       </div>
     );
   }
